@@ -130,53 +130,166 @@ public class SinglyLinkedListTest {
 
     @Test
     public void testFind(){
+        // Given
+        linkedList.add("Hello");
+        linkedList.add("World");
+        linkedList.add("My");
+        linkedList.add("Name");
+        linkedList.add("Is");
+        linkedList.add("Listy");
+
+        int expected = 2;
 
         // When
+        int actual = linkedList.find("My");
 
         // Then
+        Assert.assertEquals(expected, actual);
     }
     @Test
     public void testSize(){
+        // Given
+        linkedList.add("Hello");
+        linkedList.add("World");
+        linkedList.add("My");
+        linkedList.add("Name");
+        linkedList.add("Is");
+        linkedList.add("Listy");
+
+        int expected = 6;
 
         // When
+        int actual = linkedList.size();
 
         // Then
+        Assert.assertEquals(expected, actual);
+
     }
+    @Test
+    public void testSize2(){
+        // Given
+        int expected = 0;
+
+        // When
+        int actual = linkedList.size();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+
+    }
+
     @Test
     public void testGet(){
+        // Given
+        linkedList.add("Hello");
+        linkedList.add("World");
+        linkedList.add("My");
+        linkedList.add("Name");
+        linkedList.add("Is");
+        linkedList.add("Listy");
+
+        String expected = "Is";
 
         // When
+        String actual = linkedList.get(4);
 
         // Then
+        Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testGetNull(){
+
+        String expected = null;
+
+        // When
+        String actual = linkedList.get(0);
+
+        // Then
+        Assert.assertNull(actual);
+    }
+
     @Test
     public void testCopy(){
+        // Given
+        linkedList.add("Hello");
+        linkedList.add("World");
+        linkedList.add("My");
+        linkedList.add("Name");
+        linkedList.add("Is");
+        linkedList.add("Listy");
 
         // When
+        SinglyLinkedList<String> newList = linkedList.copy();
 
         // Then
+        for(int i = 0; i < linkedList.size(); i++){
+            String newListVal = newList.get(i);
+            String linkedListVal = linkedList.get(i);
+            Assert.assertEquals(newListVal, linkedListVal);
+        }
     }
+
+    @Test
+    public void testCopy2(){
+        // Given
+        linkedList.add("Hello");
+        linkedList.add("World");
+        linkedList.add("My");
+        linkedList.add("Name");
+        linkedList.add("Is");
+        linkedList.add("Listy");
+
+        // When
+        SinglyLinkedList<String> newList = linkedList.copy();
+
+        // Then
+        for(int i = 0; i < newList.size(); i++){
+            String newListVal = newList.get(i);
+            String linkedListVal = linkedList.get(i);
+            Assert.assertEquals(newListVal, linkedListVal);
+        }
+    }
+
+    @Test
+    public void testCopy3(){
+
+        // When
+        SinglyLinkedList<String> newList = linkedList.copy();
+
+        // Then
+        for(int i = 0; i < newList.size(); i++){
+            String newListVal = newList.get(i);
+            String linkedListVal = linkedList.get(i);
+            Assert.assertEquals(newListVal, linkedListVal);
+        }
+    }
+
     @Test
     public void testSort(){
+        // Given
+        linkedList.add("Hello");
+        linkedList.add("World");
+        linkedList.add("My");
+        linkedList.add("Name");
+        linkedList.add("Is");
+        linkedList.add("Listy");
+
+        SinglyLinkedList<String> expected = new SinglyLinkedList<>();
+        expected.add("Hello");
+        expected.add("Is");
+        expected.add("Listy");
+        expected.add("My");
+        expected.add("Name");
+        expected.add("World");
 
         // When
+        SinglyLinkedList<String> actual = linkedList.reverse();
 
         // Then
+        Assert.assertEquals(expected, actual);
     }
-    @Test
-    public void testReverse(){
 
-        // When
-
-        // Then
-    }
-    @Test
-    public void testSlice(){
-
-        // When
-
-        // Then
-    }
 
     @Test
     public void testToString(){

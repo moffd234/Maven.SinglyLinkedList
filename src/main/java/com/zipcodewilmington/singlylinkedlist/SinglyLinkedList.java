@@ -11,9 +11,10 @@ public class SinglyLinkedList<dt> extends AbstractSequentialList<dt>
     Node<dt> head;
     Node<dt> tail;
 
+
     private static class Node<DataType> {
-        DataType item;
-        Node<DataType> next;
+        public DataType item;
+        public Node<DataType> next;
 
         Node(DataType element, Node<DataType> next) {
             this.item = element;
@@ -51,7 +52,7 @@ public class SinglyLinkedList<dt> extends AbstractSequentialList<dt>
             throw new NullPointerException();
         }
         if(!isEmpty()){
-            Node prev = tail;
+            Node<dt> prev = tail;
             tail = new Node<>(dt, null);
             prev.next = tail;
         }
@@ -105,5 +106,19 @@ public class SinglyLinkedList<dt> extends AbstractSequentialList<dt>
         return output;
     }
 
+    public int find(dt dataToFind){
+        return 0;
+    }
+
+    public dt get(int index){
+        return null;
+    }
+    public SinglyLinkedList<dt> copy(){
+        return this;
+    }
+
+    public SinglyLinkedList<dt> reverse() {
+        return this;
+    }
 
 }
