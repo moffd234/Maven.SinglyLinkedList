@@ -109,6 +109,26 @@ public class SinglyLinkedListTest {
     }
 
     @Test
+    public void testPeekLast(){
+        String shouldBeNull = linkedList.peekLast();
+        Assert.assertNull(shouldBeNull);
+    }
+
+    @Test
+    public void peekLast2(){
+        // Given
+        linkedList.add("Hello");
+        linkedList.add("World");
+        String expected = "World";
+
+        // When
+        String actual = linkedList.peekLast();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
     public void testFind(){
 
         // When
