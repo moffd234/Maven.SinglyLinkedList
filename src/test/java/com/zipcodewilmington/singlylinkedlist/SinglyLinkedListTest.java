@@ -5,7 +5,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -19,7 +18,22 @@ public class SinglyLinkedListTest {
     public void setup(){
          linkedList = new SinglyLinkedList<>();
     }
+    @Test
+    public void testConstructor(){
+        SinglyLinkedList<String> l = new SinglyLinkedList<>("Initial value");
+        int expected = 1;
+        int actual = l.size();
+        Assert.assertEquals(expected, actual);
+    }
 
+    @Test
+    public void testConstructor2(){
+        String initVal = "Initial Value";
+        SinglyLinkedList<String> l = new SinglyLinkedList<>(initVal);
+
+        boolean actual = l.contains(initVal);
+        Assert.assertTrue(actual);
+    }
     @Test
     public void testAdd(){
 
@@ -58,12 +72,12 @@ public class SinglyLinkedListTest {
     public void testContains(){
         // Given
         List<String> linkedList = new SinglyLinkedList<>();
-
-        // When
         String toAdd = "This has been added";
         String addThis = "This has also been added";
-        linkedList.add(toAdd);
 
+        // When
+        linkedList.add(toAdd);
+        linkedList.add(addThis);
 
         // Then
         Assert.assertTrue(linkedList.contains(toAdd));
@@ -71,7 +85,6 @@ public class SinglyLinkedListTest {
     }
     @Test
     public void testFind(){
-        List<String> linkedList = new SinglyLinkedList<>();
 
         // When
 
@@ -79,7 +92,6 @@ public class SinglyLinkedListTest {
     }
     @Test
     public void testSize(){
-        List<String> linkedList = new SinglyLinkedList<>();
 
         // When
 
@@ -87,7 +99,6 @@ public class SinglyLinkedListTest {
     }
     @Test
     public void testGet(){
-        List<String> linkedList = new SinglyLinkedList<>();
 
         // When
 
@@ -95,7 +106,6 @@ public class SinglyLinkedListTest {
     }
     @Test
     public void testCopy(){
-        List<String> linkedList = new SinglyLinkedList<>();
 
         // When
 
@@ -103,7 +113,6 @@ public class SinglyLinkedListTest {
     }
     @Test
     public void testSort(){
-        List<String> linkedList = new SinglyLinkedList<>();
 
         // When
 
@@ -111,7 +120,6 @@ public class SinglyLinkedListTest {
     }
     @Test
     public void testReverse(){
-        List<String> linkedList = new SinglyLinkedList<>();
 
         // When
 
@@ -119,10 +127,23 @@ public class SinglyLinkedListTest {
     }
     @Test
     public void testSlice(){
-        List<String> linkedList = new SinglyLinkedList<>();
 
         // When
 
         // Then
+    }
+
+    @Test
+    public void testToString(){
+        // Given
+        linkedList.add("Hello");
+        linkedList.add("World");
+        String expected = "Hello, World";
+
+        // When
+        String output = linkedList.toString();
+
+        // Then
+        Assert.assertEquals(expected, output);
     }
 }
