@@ -74,6 +74,16 @@ public class SinglyLinkedListTest {
         Assert.assertFalse(actual);
     }
     @Test
+    public void testRemoveEmpty(){
+
+        // When
+        boolean actual = linkedList.remove("Hello");
+
+        // Then
+        Assert.assertFalse(actual);
+    }
+
+    @Test
     public void testContains(){
         // Given
         String toAdd = "This has been added";
@@ -210,7 +220,7 @@ public class SinglyLinkedListTest {
     }
 
     @Test
-    public void testCopy(){
+    public void testShallowCopy(){
         // Given
         linkedList.add("Hello");
         linkedList.add("World");
@@ -220,7 +230,7 @@ public class SinglyLinkedListTest {
         linkedList.add("Listy");
 
         // When
-        SinglyLinkedList<String> newList = linkedList.copy();
+        SinglyLinkedList<String> newList = linkedList.sCopy();
 
         // Then
         for(int i = 0; i < linkedList.size(); i++){
@@ -230,8 +240,9 @@ public class SinglyLinkedListTest {
         }
     }
 
+
     @Test
-    public void testCopy2(){
+    public void testShallowCopy2(){
         // Given
         linkedList.add("Hello");
         linkedList.add("World");
@@ -241,7 +252,7 @@ public class SinglyLinkedListTest {
         linkedList.add("Listy");
 
         // When
-        SinglyLinkedList<String> newList = linkedList.copy();
+        SinglyLinkedList<String> newList = linkedList.sCopy();
 
         // Then
         for(int i = 0; i < newList.size(); i++){
@@ -252,10 +263,10 @@ public class SinglyLinkedListTest {
     }
 
     @Test
-    public void testCopy3(){
+    public void testShallowCopy3(){
 
         // When
-        SinglyLinkedList<String> newList = linkedList.copy();
+        SinglyLinkedList<String> newList = linkedList.sCopy();
 
         // Then
         for(int i = 0; i < newList.size(); i++){
@@ -265,6 +276,28 @@ public class SinglyLinkedListTest {
         }
     }
 
+    @Test
+    public void testDeepCopy(){
+        // Given
+        linkedList.add("Hello");
+        linkedList.add("World");
+        linkedList.add("My");
+        linkedList.add("Name");
+        linkedList.add("Is");
+        linkedList.add("Listy");
+
+        // When
+        SinglyLinkedList<String> newList = linkedList.dCopy();
+
+        // Then
+        for(int i = 0; i < linkedList.size(); i++){
+            String newListVal = newList.get(i);
+            String linkedListVal = linkedList.get(i);
+            Assert.assertEquals(newListVal, linkedListVal);
+        }
+        newList.add("ADDED THIS");
+        Assert.assertFalse(linkedList.contains("ADDED THIS"));
+    }
     @Test
     public void testSort(){
         // Given

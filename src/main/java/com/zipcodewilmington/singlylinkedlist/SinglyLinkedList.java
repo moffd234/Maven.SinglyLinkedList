@@ -12,11 +12,11 @@ public class SinglyLinkedList<dt> extends AbstractSequentialList<dt>
     Node<dt> tail;
 
 
-    private static class Node<DataType> {
-        public DataType item;
-        public Node<DataType> next;
+    private static class Node<dt> {
+        public dt item;
+        public Node<dt> next;
 
-        Node(DataType element, Node<DataType> next) {
+        Node(dt element, Node<dt> next) {
             this.item = element;
             this.next = next;
         }
@@ -72,12 +72,20 @@ public class SinglyLinkedList<dt> extends AbstractSequentialList<dt>
         return tail.item;
     }
 
-    public dt remove() {
-        return null;
-    }
+    public boolean remove(Object itemToRemove) {
+//        if(isEmpty() || !contains(itemToRemove)){
+//            return false;
+//        }
+//
+//        if(size == 1){
+//            size -= 1;
+//            head = null;
+//            tail = null;
+//            return true;
+//        }
 
-    public dt poll() {
-        return null;
+
+        return false;
     }
 
     @Override
@@ -113,8 +121,20 @@ public class SinglyLinkedList<dt> extends AbstractSequentialList<dt>
     public dt get(int index){
         return null;
     }
-    public SinglyLinkedList<dt> copy(){
+    public SinglyLinkedList<dt> sCopy(){
         return this;
+    }
+
+    public SinglyLinkedList<dt> dCopy(){
+        SinglyLinkedList<dt> newList = new SinglyLinkedList<>();
+        Node<dt> current = head;
+        
+        while(current != null){
+            newList.add(current.item);
+            current = current.next;
+
+        }
+        return newList;
     }
 
     public SinglyLinkedList<dt> reverse() {
