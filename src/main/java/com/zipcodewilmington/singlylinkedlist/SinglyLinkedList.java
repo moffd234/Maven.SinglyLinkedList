@@ -11,6 +11,16 @@ public class SinglyLinkedList<dt> extends AbstractSequentialList<dt>
     Node<dt> head;
     Node<dt> tail;
 
+    private static class Node<DataType> {
+        DataType item;
+        Node<DataType> next;
+
+        Node(DataType element, Node<DataType> next) {
+            this.item = element;
+            this.next = next;
+        }
+    }
+
     SinglyLinkedList(){
          head = new Node<dt>(null, null); // Declares the head to be null
                                                        // since no head was provided
@@ -182,13 +192,5 @@ public class SinglyLinkedList<dt> extends AbstractSequentialList<dt>
         return null;
     }
 
-    private static class Node<DataType> {
-        DataType item;
-        Node<DataType> next;
 
-        Node(DataType element, Node<DataType> next) {
-            this.item = element;
-            this.next = next;
-        }
-    }
 }
