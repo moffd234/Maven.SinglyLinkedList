@@ -35,7 +35,7 @@ public class SinglyLinkedList<dt> extends AbstractSequentialList<dt>
 
     public boolean contains(Object itemToFind){
         boolean hasObject = false;
-        Node current = head;
+        Node<dt> current = head;
 
         while(current != null && !hasObject){
             if(current.item == itemToFind){

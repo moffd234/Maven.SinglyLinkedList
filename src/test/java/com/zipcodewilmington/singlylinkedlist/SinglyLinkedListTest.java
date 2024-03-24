@@ -12,7 +12,7 @@ import java.util.List;
  */
 public class SinglyLinkedListTest {
 
-    List<String> linkedList;
+    SinglyLinkedList<String> linkedList;
 
     @Before
     public void setup(){
@@ -62,16 +62,20 @@ public class SinglyLinkedListTest {
     }
     @Test
     public void testRemove(){
-        List<String> linkedList = new SinglyLinkedList<>();
+        // Given
+        linkedList.add("Hello");
+        linkedList.add("World");
 
         // When
+        linkedList.remove("Hello");
+        boolean actual = linkedList.contains("Hello");
 
         // Then
+        Assert.assertFalse(actual);
     }
     @Test
     public void testContains(){
         // Given
-        List<String> linkedList = new SinglyLinkedList<>();
         String toAdd = "This has been added";
         String addThis = "This has also been added";
 
@@ -83,6 +87,27 @@ public class SinglyLinkedListTest {
         Assert.assertTrue(linkedList.contains(toAdd));
         Assert.assertTrue(linkedList.contains(addThis));
     }
+
+    @Test
+    public void peekFirst(){
+        String shouldBeNull = linkedList.peekFirst();
+        Assert.assertNull(shouldBeNull);
+    }
+
+    @Test
+    public void peekFirst2(){
+        // Given
+        linkedList.add("Hello");
+        linkedList.add("World");
+        String expected = "Hello";
+
+        // When
+        String actual = linkedList.peekFirst();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+
     @Test
     public void testFind(){
 
