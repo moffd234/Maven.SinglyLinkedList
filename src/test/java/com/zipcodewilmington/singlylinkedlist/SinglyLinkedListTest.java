@@ -2,6 +2,7 @@ package com.zipcodewilmington.singlylinkedlist;
 
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.LinkedList;
@@ -11,10 +12,16 @@ import java.util.List;
  * Created by leon on 1/10/18.
  */
 public class SinglyLinkedListTest {
+
+    List<String> linkedList;
+
+    @Before
+    public void setup(){
+         linkedList = new SinglyLinkedList<>();
+    }
+
     @Test
     public void testAdd(){
-        // Given
-        List<String> linkedList = new SinglyLinkedList<>();
 
         // When
         String toAdd = "This has been added";
@@ -23,6 +30,21 @@ public class SinglyLinkedListTest {
 
         // Then
         Assert.assertTrue(linkedList.contains(toAdd));
+    }
+
+    @Test
+    public void testAdd2(){
+        int expected = linkedList.size() + 1;
+
+        // When
+        String toAdd = "This has been added";
+        linkedList.add(toAdd);
+        int actual = linkedList.size();
+
+
+        // Then
+        Assert.assertEquals(expected, actual);
+
     }
     @Test
     public void testRemove(){
