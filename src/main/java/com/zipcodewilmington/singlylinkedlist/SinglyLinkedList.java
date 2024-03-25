@@ -119,8 +119,21 @@ public class SinglyLinkedList<dt> extends AbstractSequentialList<dt>
     }
 
     public dt get(int index){
+        if(index > size - 1){
+            return null;
+        }
+        Node<dt> current = head;
+        int i = 0;
+        while(current != null){ 
+            if(i == index){
+                return current.item;
+            }
+            current = current.next;
+            i++;
+        }
         return null;
     }
+
     public SinglyLinkedList<dt> sCopy(){
         return this;
     }
@@ -128,7 +141,7 @@ public class SinglyLinkedList<dt> extends AbstractSequentialList<dt>
     public SinglyLinkedList<dt> dCopy(){
         SinglyLinkedList<dt> newList = new SinglyLinkedList<>();
         Node<dt> current = head;
-        
+
         while(current != null){
             newList.add(current.item);
             current = current.next;
@@ -137,7 +150,8 @@ public class SinglyLinkedList<dt> extends AbstractSequentialList<dt>
         return newList;
     }
 
-    public SinglyLinkedList<dt> reverse() {
+    public SinglyLinkedList<dt> sort(){
+
         return this;
     }
 

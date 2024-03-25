@@ -317,7 +317,7 @@ public class SinglyLinkedListTest {
         expected.add("World");
 
         // When
-        SinglyLinkedList<String> actual = linkedList.reverse();
+        SinglyLinkedList<String> actual = linkedList.sort();
 
         // Then
         Assert.assertEquals(expected, actual);
