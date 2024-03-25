@@ -193,6 +193,12 @@ public class SinglyLinkedListTest {
     }
 
     @Test
+    public void peekFirstInteger(){
+        Integer shouldBeNull = intLinkedList.peekFirst();
+        Assert.assertNull(shouldBeNull);
+    }
+
+    @Test
     public void peekFirst2(){
         // Given
         linkedList.add("Hello");
@@ -201,6 +207,20 @@ public class SinglyLinkedListTest {
 
         // When
         String actual = linkedList.peekFirst();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void peekFirstInteger2(){
+        // Given
+        intLinkedList.add(1);
+        intLinkedList.add(2);
+        Integer expected = 1;
+
+        // When
+        Integer actual = intLinkedList.peekFirst();
 
         // Then
         Assert.assertEquals(expected, actual);
@@ -221,6 +241,26 @@ public class SinglyLinkedListTest {
 
         // When
         String actual = linkedList.peekLast();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testPeekLastInteger(){
+        Integer shouldBeNull = intLinkedList.peekLast();
+        Assert.assertNull(shouldBeNull);
+    }
+
+    @Test
+    public void peekLast2Integer(){
+        // Given
+        intLinkedList.add(1);
+        intLinkedList.add(2);
+        Integer expected = 2;
+
+        // When
+        Integer actual = intLinkedList.peekLast();
 
         // Then
         Assert.assertEquals(expected, actual);
@@ -256,6 +296,35 @@ public class SinglyLinkedListTest {
     }
 
     @Test
+    public void testFindInteger(){
+        // Given
+        intLinkedList.add(1);
+        intLinkedList.add(2);
+        intLinkedList.add(3);
+        intLinkedList.add(4);
+        intLinkedList.add(5);
+        intLinkedList.add(6);
+
+        int expected = 1;
+
+        // When
+        int actual = intLinkedList.find(2);
+
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testFindInteger2(){
+
+        // When
+        Integer actual = intLinkedList.find(1);
+
+        // Then
+        Assert.assertNull(actual);
+    }
+
+    @Test
     public void testSize(){
         // Given
         linkedList.add("Hello");
@@ -276,6 +345,38 @@ public class SinglyLinkedListTest {
     }
     @Test
     public void testSize2(){
+        // Given
+        int expected = 0;
+
+        // When
+        int actual = linkedList.size();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void testSizeInteger(){
+        // Given
+        intLinkedList.add(1);
+        intLinkedList.add(2);
+        intLinkedList.add(3);
+        intLinkedList.add(4);
+        intLinkedList.add(5);
+        intLinkedList.add(6);
+
+        int expected = 6;
+
+        // When
+        int actual = intLinkedList.size();
+
+        // Then
+        Assert.assertEquals(expected, actual);
+
+    }
+    @Test
+    public void testSizeInteger2(){
         // Given
         int expected = 0;
 
@@ -420,6 +521,19 @@ public class SinglyLinkedListTest {
 
         // When
         String output = linkedList.toString();
+
+        // Then
+        Assert.assertEquals(expected, output);
+    }
+    @Test
+    public void testToStringInteger(){
+        // Given
+        intLinkedList.add(1);
+        intLinkedList.add(2);
+        String expected = "1, 2";
+
+        // When
+        String output = intLinkedList.toString();
 
         // Then
         Assert.assertEquals(expected, output);

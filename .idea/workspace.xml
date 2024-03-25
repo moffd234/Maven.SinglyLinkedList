@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4f0c6f35-1ac5-49ea-b41e-20445c07c5c6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zipcodewilmington/singlylinkedlist/SinglyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zipcodewilmington/singlylinkedlist/SinglyLinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/zipcodewilmington/singlylinkedlist/SinglyLinkedListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zipcodewilmington/singlylinkedlist/SinglyLinkedListTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -228,6 +227,8 @@
     "JUnit.SinglyLinkedListTest.executor": "Run",
     "JUnit.SinglyLinkedListTest.peekFirst.executor": "Run",
     "JUnit.SinglyLinkedListTest.peekFirst2.executor": "Run",
+    "JUnit.SinglyLinkedListTest.peekFirstInteger.executor": "Run",
+    "JUnit.SinglyLinkedListTest.peekFirstInteger2.executor": "Run",
     "JUnit.SinglyLinkedListTest.peekLast2.executor": "Run",
     "JUnit.SinglyLinkedListTest.testAdd.executor": "Run",
     "JUnit.SinglyLinkedListTest.testAdd2.executor": "Run",
@@ -235,12 +236,14 @@
     "JUnit.SinglyLinkedListTest.testConstructor2.executor": "Run",
     "JUnit.SinglyLinkedListTest.testConstructorInts.executor": "Run",
     "JUnit.SinglyLinkedListTest.testContains.executor": "Run",
+    "JUnit.SinglyLinkedListTest.testContainsInteger.executor": "Run",
     "JUnit.SinglyLinkedListTest.testCopy.executor": "Run",
     "JUnit.SinglyLinkedListTest.testDeepCopy.executor": "Run",
     "JUnit.SinglyLinkedListTest.testGetNull.executor": "Run",
     "JUnit.SinglyLinkedListTest.testPeekLast.executor": "Run",
     "JUnit.SinglyLinkedListTest.testRemove.executor": "Run",
     "JUnit.SinglyLinkedListTest.testRemoveEmpty.executor": "Run",
+    "JUnit.SinglyLinkedListTest.testRemoveEmptyInt.executor": "Run",
     "JUnit.SinglyLinkedListTest.testRemoveInteger.executor": "Run",
     "JUnit.SinglyLinkedListTest.testShallowCopy.executor": "Run",
     "JUnit.SinglyLinkedListTest.testSize.executor": "Run",
@@ -254,7 +257,7 @@
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.SinglyLinkedListTest.testContainsInteger">
+  <component name="RunManager" selected="JUnit.SinglyLinkedListTest">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -360,7 +363,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SinglyLinkedListTest.testConstructor2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SinglyLinkedListTest.peekFirstInteger" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="singlylinkedlist" />
       <extension name="coverage">
         <pattern>
@@ -370,14 +373,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.zipcodewilmington.singlylinkedlist" />
       <option name="MAIN_CLASS_NAME" value="com.zipcodewilmington.singlylinkedlist.SinglyLinkedListTest" />
-      <option name="METHOD_NAME" value="testConstructor2" />
+      <option name="METHOD_NAME" value="peekFirstInteger" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SinglyLinkedListTest.testContainsInteger" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SinglyLinkedListTest.peekFirstInteger2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="singlylinkedlist" />
       <extension name="coverage">
         <pattern>
@@ -387,14 +390,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.zipcodewilmington.singlylinkedlist" />
       <option name="MAIN_CLASS_NAME" value="com.zipcodewilmington.singlylinkedlist.SinglyLinkedListTest" />
-      <option name="METHOD_NAME" value="testContainsInteger" />
+      <option name="METHOD_NAME" value="peekFirstInteger2" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SinglyLinkedListTest.testRemoveEmptyInt" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SinglyLinkedListTest.testSizeInteger2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="singlylinkedlist" />
       <extension name="coverage">
         <pattern>
@@ -404,14 +407,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.zipcodewilmington.singlylinkedlist" />
       <option name="MAIN_CLASS_NAME" value="com.zipcodewilmington.singlylinkedlist.SinglyLinkedListTest" />
-      <option name="METHOD_NAME" value="testRemoveEmptyInt" />
+      <option name="METHOD_NAME" value="testSizeInteger2" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SinglyLinkedListTest.testRemoveInteger" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SinglyLinkedListTest.testToStringInteger" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="singlylinkedlist" />
       <extension name="coverage">
         <pattern>
@@ -421,7 +424,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.zipcodewilmington.singlylinkedlist" />
       <option name="MAIN_CLASS_NAME" value="com.zipcodewilmington.singlylinkedlist.SinglyLinkedListTest" />
-      <option name="METHOD_NAME" value="testRemoveInteger" />
+      <option name="METHOD_NAME" value="testToStringInteger" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -452,11 +455,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SinglyLinkedListTest.testContainsInteger" />
-        <item itemvalue="JUnit.SinglyLinkedListTest.testRemoveEmptyInt" />
-        <item itemvalue="JUnit.SinglyLinkedListTest.testRemoveInteger" />
         <item itemvalue="JUnit.SinglyLinkedListTest" />
-        <item itemvalue="JUnit.SinglyLinkedListTest.testConstructor2" />
+        <item itemvalue="JUnit.SinglyLinkedListTest.testSizeInteger2" />
+        <item itemvalue="JUnit.SinglyLinkedListTest.testToStringInteger" />
+        <item itemvalue="JUnit.SinglyLinkedListTest.peekFirstInteger2" />
+        <item itemvalue="JUnit.SinglyLinkedListTest.peekFirstInteger" />
       </list>
     </recent_temporary>
   </component>
@@ -521,15 +524,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/zipcodewilmington/singlylinkedlist/SinglyLinkedList.java</url>
           <line>75</line>
           <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/com/zipcodewilmington/singlylinkedlist/SinglyLinkedListTest.java</url>
-          <line>125</line>
-          <properties class="com.zipcodewilmington.singlylinkedlist.SinglyLinkedListTest" method="testRemoveInteger">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
