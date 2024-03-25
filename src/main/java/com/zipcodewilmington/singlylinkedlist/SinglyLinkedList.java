@@ -114,8 +114,17 @@ public class SinglyLinkedList<dt> extends AbstractSequentialList<dt>
         return output;
     }
 
-    public int find(dt dataToFind){
-        return 0;
+    public Integer find(dt dataToFind){
+        if(!this.contains(dataToFind)){
+            return null;
+        }
+        Node current = head;
+        int index = 0;
+        while(current.item != dataToFind){
+            current = current.next;
+            index += 1;
+        }
+        return index;
     }
 
     public dt get(int index){
@@ -124,7 +133,7 @@ public class SinglyLinkedList<dt> extends AbstractSequentialList<dt>
         }
         Node<dt> current = head;
         int i = 0;
-        while(current != null){ 
+        while(current != null){
             if(i == index){
                 return current.item;
             }

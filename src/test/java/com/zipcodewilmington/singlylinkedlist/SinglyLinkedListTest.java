@@ -156,6 +156,17 @@ public class SinglyLinkedListTest {
         // Then
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void testFind2(){
+
+        // When
+        Integer actual = linkedList.find("My");
+
+        // Then
+        Assert.assertNull(actual);
+    }
+
     @Test
     public void testSize(){
         // Given
