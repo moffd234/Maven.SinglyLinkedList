@@ -419,23 +419,53 @@ public class SinglyLinkedListTest {
         Assert.assertNull(actual);
     }
 
+
     @Test
-    public void testShallowCopy(){
+    public void testGetInteger(){
         // Given
-        linkedList.add("Hello");
-        linkedList.add("World");
-        linkedList.add("My");
-        linkedList.add("Name");
-        linkedList.add("Is");
-        linkedList.add("Listy");
+        intLinkedList.add(1);
+        intLinkedList.add(2);
+        intLinkedList.add(3);
+        intLinkedList.add(4);
+        intLinkedList.add(5);
+        intLinkedList.add(6);
+
+        Integer expected = 5;
 
         // When
-        SinglyLinkedList<String> newList = linkedList.sCopy();
+        Integer actual = intLinkedList.get(4);
 
         // Then
-        for(int i = 0; i < linkedList.size(); i++){
-            String newListVal = newList.get(i);
-            String linkedListVal = linkedList.get(i);
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testGetNullIntegerList(){
+
+        // When
+        Integer actual = intLinkedList.get(0);
+
+        // Then
+        Assert.assertNull(actual);
+    }
+
+    @Test
+    public void testShallowCopyInteger(){
+        // Given
+        intLinkedList.add(1);
+        intLinkedList.add(2);
+        intLinkedList.add(3);
+        intLinkedList.add(4);
+        intLinkedList.add(5);
+        intLinkedList.add(6);
+
+        // When
+        SinglyLinkedList<Integer> newList = intLinkedList.sCopy();
+
+        // Then
+        for(int i = 0; i < intLinkedList.size(); i++){
+            Integer newListVal = newList.get(i);
+            Integer linkedListVal = intLinkedList.get(i);
             Assert.assertEquals(newListVal, linkedListVal);
         }
     }
@@ -497,6 +527,86 @@ public class SinglyLinkedListTest {
         }
         newList.add("ADDED THIS");
         Assert.assertFalse(linkedList.contains("ADDED THIS"));
+    }
+
+    @Test
+    public void testShallowCopy(){
+        // Given
+        linkedList.add("Hello");
+        linkedList.add("World");
+        linkedList.add("My");
+        linkedList.add("Name");
+        linkedList.add("Is");
+        linkedList.add("Listy");
+
+        // When
+        SinglyLinkedList<String> newList = linkedList.sCopy();
+
+        // Then
+        for(int i = 0; i < linkedList.size(); i++){
+            String newListVal = newList.get(i);
+            String linkedListVal = linkedList.get(i);
+            Assert.assertEquals(newListVal, linkedListVal);
+        }
+    }
+
+
+    @Test
+    public void testShallowCopyInteger2(){
+        // Given
+        intLinkedList.add(1);
+        intLinkedList.add(2);
+        intLinkedList.add(3);
+        intLinkedList.add(4);
+        intLinkedList.add(5);
+        intLinkedList.add(6);
+
+        // When
+        SinglyLinkedList<Integer> newList = intLinkedList.sCopy();
+
+        // Then
+        for(int i = 0; i < newList.size(); i++){
+            Integer newListVal = newList.get(i);
+            Integer linkedListVal = intLinkedList.get(i);
+            Assert.assertEquals(newListVal, linkedListVal);
+        }
+    }
+
+    @Test
+    public void testShallowCopyInteger3(){
+
+        // When
+        SinglyLinkedList<Integer> newList = intLinkedList.sCopy();
+
+        // Then
+        for(int i = 0; i < newList.size(); i++){
+            Integer newListVal = newList.get(i);
+            Integer linkedListVal = intLinkedList.get(i);
+            Assert.assertEquals(newListVal, linkedListVal);
+        }
+    }
+
+    @Test
+    public void testDeepCopyInteger(){
+        // Given
+        intLinkedList.add(1);
+        intLinkedList.add(2);
+        intLinkedList.add(3);
+        intLinkedList.add(4);
+        intLinkedList.add(5);
+        intLinkedList.add(6);
+
+        // When
+        SinglyLinkedList<Integer> newList = intLinkedList.dCopy();
+
+        // Then
+        for(int i = 0; i < intLinkedList.size(); i++){
+            Integer newListVal = newList.get(i);
+            Integer linkedListVal = intLinkedList.get(i);
+            Assert.assertEquals(newListVal, linkedListVal);
+        }
+        newList.add(59038290);
+        Assert.assertFalse(intLinkedList.contains(59038290));
     }
 
     @Test

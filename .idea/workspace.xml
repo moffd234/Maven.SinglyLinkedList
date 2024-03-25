@@ -246,11 +246,14 @@
     "JUnit.SinglyLinkedListTest.testRemoveEmptyInt.executor": "Run",
     "JUnit.SinglyLinkedListTest.testRemoveInteger.executor": "Run",
     "JUnit.SinglyLinkedListTest.testShallowCopy.executor": "Run",
+    "JUnit.SinglyLinkedListTest.testShallowCopyInteger.executor": "Run",
     "JUnit.SinglyLinkedListTest.testSize.executor": "Run",
     "JUnit.SinglyLinkedListTest.testSize2.executor": "Run",
+    "JUnit.SinglyLinkedListTest.testSizeInteger2.executor": "Run",
     "JUnit.SinglyLinkedListTest.testSort.executor": "Run",
     "JUnit.SinglyLinkedListTest.testSortAscendingOrder.executor": "Run",
     "JUnit.SinglyLinkedListTest.testToString.executor": "Run",
+    "JUnit.SinglyLinkedListTest.testToStringInteger.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -363,23 +366,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SinglyLinkedListTest.peekFirstInteger" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="singlylinkedlist" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zipcodewilmington.singlylinkedlist.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.zipcodewilmington.singlylinkedlist" />
-      <option name="MAIN_CLASS_NAME" value="com.zipcodewilmington.singlylinkedlist.SinglyLinkedListTest" />
-      <option name="METHOD_NAME" value="peekFirstInteger" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SinglyLinkedListTest.peekFirstInteger2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="singlylinkedlist" />
       <extension name="coverage">
@@ -391,6 +377,23 @@
       <option name="PACKAGE_NAME" value="com.zipcodewilmington.singlylinkedlist" />
       <option name="MAIN_CLASS_NAME" value="com.zipcodewilmington.singlylinkedlist.SinglyLinkedListTest" />
       <option name="METHOD_NAME" value="peekFirstInteger2" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SinglyLinkedListTest.testShallowCopyInteger" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="singlylinkedlist" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zipcodewilmington.singlylinkedlist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zipcodewilmington.singlylinkedlist" />
+      <option name="MAIN_CLASS_NAME" value="com.zipcodewilmington.singlylinkedlist.SinglyLinkedListTest" />
+      <option name="METHOD_NAME" value="testShallowCopyInteger" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -456,10 +459,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.SinglyLinkedListTest" />
+        <item itemvalue="JUnit.SinglyLinkedListTest.testShallowCopyInteger" />
         <item itemvalue="JUnit.SinglyLinkedListTest.testSizeInteger2" />
         <item itemvalue="JUnit.SinglyLinkedListTest.testToStringInteger" />
         <item itemvalue="JUnit.SinglyLinkedListTest.peekFirstInteger2" />
-        <item itemvalue="JUnit.SinglyLinkedListTest.peekFirstInteger" />
       </list>
     </recent_temporary>
   </component>
