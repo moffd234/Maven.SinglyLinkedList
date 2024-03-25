@@ -13,14 +13,23 @@ import java.util.List;
 public class SinglyLinkedListTest {
 
     SinglyLinkedList<String> linkedList;
+    SinglyLinkedList<Integer> intLinkedList;
 
     @Before
     public void setup(){
          linkedList = new SinglyLinkedList<>();
+         intLinkedList = new SinglyLinkedList<>();
     }
     @Test
     public void testConstructor(){
         SinglyLinkedList<String> l = new SinglyLinkedList<>("Initial value");
+        int expected = 1;
+        int actual = l.size();
+        Assert.assertEquals(expected, actual);
+    }
+    @Test
+    public void testConstructorInts(){
+        SinglyLinkedList<Integer> l = new SinglyLinkedList<>(1);
         int expected = 1;
         int actual = l.size();
         Assert.assertEquals(expected, actual);
@@ -34,6 +43,16 @@ public class SinglyLinkedListTest {
         boolean actual = l.contains(initVal);
         Assert.assertTrue(actual);
     }
+
+    @Test
+    public void testConstructorInteger2(){
+        Integer initVal = 1;
+        SinglyLinkedList<Integer> l = new SinglyLinkedList<>(initVal);
+
+        boolean actual = l.contains(initVal);
+        Assert.assertTrue(actual);
+    }
+
     @Test
     public void testAdd(){
 
@@ -60,6 +79,35 @@ public class SinglyLinkedListTest {
         Assert.assertEquals(expected, actual);
 
     }
+
+    @Test
+    public void testAddInteger(){
+
+        // When
+        Integer toAdd = 1;
+        intLinkedList.add(toAdd);
+
+
+        // Then
+        Assert.assertTrue(intLinkedList.contains(toAdd));
+    }
+
+    @Test
+    public void testAddInteger2(){
+        int expected = intLinkedList.size() + 1;
+
+        // When
+        Integer toAdd = 1;
+        intLinkedList.add(toAdd);
+        int actual = intLinkedList.size();
+
+
+        // Then
+        Assert.assertEquals(expected, actual);
+
+    }
+
+
     @Test
     public void testRemove(){
         // Given
@@ -73,11 +121,36 @@ public class SinglyLinkedListTest {
         // Then
         Assert.assertFalse(actual);
     }
+
+    @Test
+    public void testRemoveInteger(){
+        // Given
+        intLinkedList.add(1);
+        intLinkedList.add(2);
+
+        // When
+        intLinkedList.remove((Integer) 1);
+        boolean actual = intLinkedList.contains(1);
+
+        // Then
+        Assert.assertFalse(actual);
+    }
+
     @Test
     public void testRemoveEmpty(){
 
         // When
         boolean actual = linkedList.remove("Hello");
+
+        // Then
+        Assert.assertFalse(actual);
+    }
+
+    @Test
+    public void testRemoveEmptyInt(){
+
+        // When
+        boolean actual = intLinkedList.remove((Integer) 1);
 
         // Then
         Assert.assertFalse(actual);
@@ -96,6 +169,21 @@ public class SinglyLinkedListTest {
         // Then
         Assert.assertTrue(linkedList.contains(toAdd));
         Assert.assertTrue(linkedList.contains(addThis));
+    }
+
+    @Test
+    public void testContainsInteger(){
+        // Given
+        Integer toAdd = 1;
+        Integer addThis = 240;
+
+        // When
+        intLinkedList.add(toAdd);
+        intLinkedList.add(addThis);
+
+        // Then
+        Assert.assertTrue(intLinkedList.contains(toAdd));
+        Assert.assertTrue(intLinkedList.contains(addThis));
     }
 
     @Test
@@ -309,29 +397,17 @@ public class SinglyLinkedListTest {
         newList.add("ADDED THIS");
         Assert.assertFalse(linkedList.contains("ADDED THIS"));
     }
+
     @Test
-    public void testSort(){
-        // Given
-        linkedList.add("Hello");
-        linkedList.add("World");
-        linkedList.add("My");
-        linkedList.add("Name");
-        linkedList.add("Is");
-        linkedList.add("Listy");
-
-        SinglyLinkedList<String> expected = new SinglyLinkedList<>();
-        expected.add("Hello");
-        expected.add("Is");
-        expected.add("Listy");
-        expected.add("My");
-        expected.add("Name");
-        expected.add("World");
-
-        // When
-        SinglyLinkedList<String> actual = linkedList.sort();
-
-        // Then
-        Assert.assertEquals(expected, actual);
+    public void testSort() {
+        SinglyLinkedList linkedList1 = new SinglyLinkedList<>();
+        linkedList1.add(5);
+        linkedList1.add(2);
+        linkedList1.add(8);
+        linkedList1.add(1);
+        linkedList1.add(3);
+        SinglyLinkedList<Integer> sortedList = linkedList1.sort();
+        Assert.assertEquals("1, 2, 3, 5, 8", sortedList.toString());
     }
 
 

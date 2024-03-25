@@ -82,6 +82,7 @@ public class SinglyLinkedList<dt> extends AbstractSequentialList<dt>
         // If head is the itemToRemove change the head to the 2nd item
         if(head.item == itemToRemove){
             head = current.next;  // Will current be garbage collected?
+            size -= 1;
             return true;
         }
 
@@ -89,7 +90,7 @@ public class SinglyLinkedList<dt> extends AbstractSequentialList<dt>
             prev = current;
             current = current.next;
         }
-
+        size -= 1;
         prev.next = current.next;
 
         return true;
@@ -167,7 +168,31 @@ public class SinglyLinkedList<dt> extends AbstractSequentialList<dt>
     }
 
     public SinglyLinkedList<dt> sort(){
+        Node<dt> current = head, index = null;
 
+        if (head == null) {
+            return null;
+        } else {
+            while (current != null) {
+                // Node index will point to node next to
+                // current
+                index = current.next;
+
+                while (index != null) {
+
+                    // Check if the current item is greater than the index item
+                    if (((Comparable<dt>) current.item).compareTo(index.item) > 0) {
+                        // Swap items
+                        dt temp = current.item;
+                        current.item = index.item;
+                        index.item = temp;
+                    }
+
+                    index = index.next;
+                }
+                current = current.next;
+            }
+        }
         return this;
     }
 
