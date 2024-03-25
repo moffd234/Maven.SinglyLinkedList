@@ -73,19 +73,26 @@ public class SinglyLinkedList<dt> extends AbstractSequentialList<dt>
     }
 
     public boolean remove(Object itemToRemove) {
-//        if(isEmpty() || !contains(itemToRemove)){
-//            return false;
-//        }
-//
-//        if(size == 1){
-//            size -= 1;
-//            head = null;
-//            tail = null;
-//            return true;
-//        }
+        if(isEmpty() || !contains(itemToRemove)){
+            return false;
+        }
+        Node<dt> current = head;
+        Node<dt> prev = null;
 
+        // If head is the itemToRemove change the head to the 2nd item
+        if(head.item == itemToRemove){
+            head = current.next;  // Will current be garbage collected?
+            return true;
+        }
 
-        return false;
+        while(current != null && current.item != itemToRemove){
+            prev = current;
+            current = current.next;
+        }
+
+        prev.next = current.next;
+
+        return true;
     }
 
     @Override

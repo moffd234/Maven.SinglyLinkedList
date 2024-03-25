@@ -447,9 +447,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.SinglyLinkedListTest" />
-        <item itemvalue="JUnit.SinglyLinkedListTest.testDeepCopy" />
-        <item itemvalue="JUnit.SinglyLinkedListTest.testRemove" />
         <item itemvalue="JUnit.SinglyLinkedListTest.testRemoveEmpty" />
+        <item itemvalue="JUnit.SinglyLinkedListTest.testRemove" />
+        <item itemvalue="JUnit.SinglyLinkedListTest.testDeepCopy" />
         <item itemvalue="JUnit.SinglyLinkedListTest.testGetNull" />
       </list>
     </recent_temporary>
