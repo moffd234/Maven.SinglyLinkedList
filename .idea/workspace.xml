@@ -222,44 +222,44 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.SinglyLinkedListTest.executor": "Run",
-    "JUnit.SinglyLinkedListTest.peekFirst.executor": "Run",
-    "JUnit.SinglyLinkedListTest.peekFirst2.executor": "Run",
-    "JUnit.SinglyLinkedListTest.peekFirstInteger.executor": "Run",
-    "JUnit.SinglyLinkedListTest.peekFirstInteger2.executor": "Run",
-    "JUnit.SinglyLinkedListTest.peekLast2.executor": "Run",
-    "JUnit.SinglyLinkedListTest.testAdd.executor": "Run",
-    "JUnit.SinglyLinkedListTest.testAdd2.executor": "Run",
-    "JUnit.SinglyLinkedListTest.testConstructor.executor": "Run",
-    "JUnit.SinglyLinkedListTest.testConstructor2.executor": "Run",
-    "JUnit.SinglyLinkedListTest.testConstructorInts.executor": "Run",
-    "JUnit.SinglyLinkedListTest.testContains.executor": "Run",
-    "JUnit.SinglyLinkedListTest.testContainsInteger.executor": "Run",
-    "JUnit.SinglyLinkedListTest.testCopy.executor": "Run",
-    "JUnit.SinglyLinkedListTest.testDeepCopy.executor": "Run",
-    "JUnit.SinglyLinkedListTest.testGetNull.executor": "Run",
-    "JUnit.SinglyLinkedListTest.testPeekLast.executor": "Run",
-    "JUnit.SinglyLinkedListTest.testRemove.executor": "Run",
-    "JUnit.SinglyLinkedListTest.testRemoveEmpty.executor": "Run",
-    "JUnit.SinglyLinkedListTest.testRemoveEmptyInt.executor": "Run",
-    "JUnit.SinglyLinkedListTest.testRemoveInteger.executor": "Run",
-    "JUnit.SinglyLinkedListTest.testShallowCopy.executor": "Run",
-    "JUnit.SinglyLinkedListTest.testShallowCopyInteger.executor": "Run",
-    "JUnit.SinglyLinkedListTest.testSize.executor": "Run",
-    "JUnit.SinglyLinkedListTest.testSize2.executor": "Run",
-    "JUnit.SinglyLinkedListTest.testSizeInteger2.executor": "Run",
-    "JUnit.SinglyLinkedListTest.testSort.executor": "Run",
-    "JUnit.SinglyLinkedListTest.testSortAscendingOrder.executor": "Run",
-    "JUnit.SinglyLinkedListTest.testToString.executor": "Run",
-    "JUnit.SinglyLinkedListTest.testToStringInteger.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.SinglyLinkedListTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinglyLinkedListTest.peekFirst.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinglyLinkedListTest.peekFirst2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinglyLinkedListTest.peekFirstInteger.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinglyLinkedListTest.peekFirstInteger2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinglyLinkedListTest.peekLast2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinglyLinkedListTest.testAdd.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinglyLinkedListTest.testAdd2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinglyLinkedListTest.testConstructor.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinglyLinkedListTest.testConstructor2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinglyLinkedListTest.testConstructorInts.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinglyLinkedListTest.testContains.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinglyLinkedListTest.testContainsInteger.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinglyLinkedListTest.testCopy.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinglyLinkedListTest.testDeepCopy.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinglyLinkedListTest.testGetNull.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinglyLinkedListTest.testPeekLast.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinglyLinkedListTest.testRemove.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinglyLinkedListTest.testRemoveEmpty.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinglyLinkedListTest.testRemoveEmptyInt.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinglyLinkedListTest.testRemoveInteger.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinglyLinkedListTest.testShallowCopy.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinglyLinkedListTest.testShallowCopyInteger.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinglyLinkedListTest.testSize.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinglyLinkedListTest.testSize2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinglyLinkedListTest.testSizeInteger2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinglyLinkedListTest.testSort.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinglyLinkedListTest.testSortAscendingOrder.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinglyLinkedListTest.testToString.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SinglyLinkedListTest.testToStringInteger.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="JUnit.SinglyLinkedListTest">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="" />
@@ -523,11 +523,6 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/zipcodewilmington/singlylinkedlist/SinglyLinkedList.java</url>
-          <line>75</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

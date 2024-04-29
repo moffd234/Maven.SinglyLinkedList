@@ -5,8 +5,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.List;
-
 /**
  * Created by leon on 1/10/18.
  */
@@ -620,7 +618,7 @@ public class SinglyLinkedListTest {
         SinglyLinkedList<Integer> sortedList = linkedList1.sort();
         Assert.assertEquals("1, 2, 3, 5, 8", sortedList.toString());
     }
-    
+
     @Test
     public void testToString(){
         // Given
